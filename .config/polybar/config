@@ -48,7 +48,7 @@ font-2 = "Wuncon Siji:pixelsize=8;1"
 
 modules-left = i3
 modules-center = 
-modules-right = filesystem xbacklight volume memory cpu battery temperature date powermenu
+modules-right = filesystem xbacklight spotify volume memory cpu battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -352,6 +352,13 @@ menu-0-1 = reboot
 menu-0-1-exec = reboot
 menu-0-2 = shutdown
 menu-0-2-exec = poweroff
+
+[module/spotify]
+type = custom/script
+interval = 2
+
+label = %output:0:45:...%
+exec = $HOME/.config/polybar/spotify
 
 
 [settings]
