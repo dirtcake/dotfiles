@@ -17,4 +17,4 @@ try:
         print(track + " - " + artist)
 
 except:
-    print("Media Inactive")
+    print('')
