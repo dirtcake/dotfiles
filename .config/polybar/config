@@ -48,7 +48,7 @@ font-2 = "Wuncon Siji:pixelsize=8;1"
 
 modules-left = i3
 modules-center = 
-modules-right = filesystem xbacklight spotify volume memory cpu battery temperature date powermenu
+modules-right = filesystem xbacklight spotify volume memory cpu battery temperature wlan eth date powermenu
 
 tray-position = right
 tray-padding = 2
