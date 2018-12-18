@@ -73,7 +73,7 @@
 ! u r x v t
 
 urxvt.geometry:            80x28
-urxvt.font:                xft:Noto Mono:size=8
+!urxvt.font:                xft:Noto Mono:size=8
 urxvt.scrollBar:           false
 urxvt.scrollBar_right:     true
 urxvt.scrollColor:         #000000
@@ -88,4 +88,5 @@ urxvt.secondaryScreen:     1
 urxvt.secondaryScroll:     0
 urxvt.transparent:         true
 urxvt.shading:             1
-urxvt.letterSpace:         -1
+!urxvt.letterSpace:         -4
+

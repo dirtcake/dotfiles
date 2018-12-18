@@ -48,7 +48,7 @@ font-2 = "Wuncon Siji:pixelsize=8;1"
 
 modules-left = i3
 modules-center = 
-modules-right = filesystem xbacklight spotify volume memory cpu battery temperature wlan eth date powermenu
+modules-right = filesystem xbacklight spotify volume memory cpu battery temperature wlan eth vpnmenu date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -206,7 +206,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp2s0
+interface = wlp1s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -292,9 +292,11 @@ battery = BAT0
 adapter = AC0
 full-at = 98
 
+label-charging = %percentage%% %time%
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
 
+label-discharging = %percentage%% %time%
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
@@ -331,6 +333,21 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
+
+[module/vpnmenu]
+type = custom/menu
+expand-right = true
+format-spacing = 1
+label-open = VPN
+label-open-foreground = ${colors.primary}
+label-close = cancel
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+menu-0-0 = disconnect
+menu-0-0-exec = sudo openvpn-disconnect
+menu-0-1 = connect
+menu-0-1-exec = sudo openvpn-connect
 
 [module/powermenu]
 type = custom/menu
